@@ -74,9 +74,21 @@ if __name__ == '__main__':
         results, output_dict = processor.start(results, output_dict)
     for key in results.keys():
         print(key)
-        print('precision: {} {} +- std {}'.format(np.mean(results[key]['precision']), np.std(results[key]['precision']), np.std(results[key]['precision'])/np.sqrt(len(results[key]['precision']))))
-        print('recall: {} {} +- std {}'.format(np.mean(results[key]['recall']), np.std(results[key]['recall']), np.std(results[key]['recall'])/np.sqrt(len(results[key]['recall']))))
-        print('f1: {} {} +- std {}'.format(np.mean(results[key]['f1']), np.std(results[key]['f1']), np.std(results[key]['f1'])/np.sqrt(len(results[key]['f1']))))
+        precision = results[key]['precision']
+        recall = results[key]['recall']
+        f1 = results[key]['f1']
+        print(
+            f"precision: {np.mean(precision)} {np.std(precision)} "
+            f"+- std {np.std(precision)/np.sqrt(len(precision))}"
+        )
+        print(
+            f"recall: {np.mean(recall)} {np.std(recall)} "
+            f"+- std {np.std(recall)/np.sqrt(len(recall))}"
+        )
+        print(
+            f"f1: {np.mean(f1)} {np.std(f1)} "
+            f"+- std {np.std(f1)/np.sqrt(len(f1))}"
+        )
     # save results to pickle file
     results_path = os.path.join(
         arg.log_base_path, 

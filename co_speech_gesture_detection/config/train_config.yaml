@@ -3,8 +3,8 @@ Experiment_name: sequential_{}_recurrent_{}_training_{}_joint_fold_{}_lr_{}_to_s
 # feeder, currently no preprocessing implemented so that we run the first evaluation using sequences of segments
 feeder: feeders.feeder_sequential.Feeder
 train_feeder_args:
-  data_path: co_speech_gesture_detection/data/data/sw_ilya_1606_final/{}/test_data_27_joint.npy
-  label_path: co_speech_gesture_detection/data/data/sw_ilya_1606_final/{}/test_27_label.pkl
+  data_path: co_speech_gesture_detection/data/data/{}/train_data_27_joint.npy
+  label_path: co_speech_gesture_detection/data/data/{}/train_27_label.pkl
   debug: False
   random_choose: False
   random_shift: True
@@ -19,8 +19,8 @@ train_feeder_args:
 
 
 test_feeder_args:
-  data_path: co_speech_gesture_detection/data/data/sw_ilya_1606_final/{}/test_data_27_joint.npy
-  label_path: co_speech_gesture_detection/data/data/sw_ilya_1606_final/{}/test_27_label.pkl
+  data_path: co_speech_gesture_detection/data/data/{}/test_data_27_joint.npy
+  label_path: co_speech_gesture_detection/data/data/{}/test_27_label.pkl
   random_mirror: False
   normalization: True
   is_vector: False
