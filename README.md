@@ -1,4 +1,4 @@
-# co_speech_gesture_detection
+# Co-Speech Gesture Detection
 ---
 
 This repository contains the code of "Co-Speech Gesture Detection through Multi-phase Sequence Labeling".
